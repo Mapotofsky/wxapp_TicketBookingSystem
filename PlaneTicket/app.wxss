@@ -1,0 +1,32 @@
+@import 'colorui/main.wxss';
+@import 'colorui/icon.wxss';
+@import 'colorui/animation.wxss';
+.menu-item{  
+    width: 32%;  
+    float: left;  
+    text-align: center;  
+    padding-top: 8px;  
+  }  
+  .menu-item2{  
+    width: 24%;  
+    float: left;  
+    text-align: center;  
+    padding-top: 8px;  
+  }  
+  .img{  
+    width: 30rpx;  
+    height: 30rpx;  
+    display: block;  
+    margin:auto;  
+  }  
+  .clear{  
+    clear: both;  
+  }  
+  .tab-bar{  
+    position: fixed;  
+    width: 100%;  
+    padding: 0px 2%;  
+  }  
+  .tabbar_text{
+    font-size: 28rpx
+  }

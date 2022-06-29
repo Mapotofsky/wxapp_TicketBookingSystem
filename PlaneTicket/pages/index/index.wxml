@@ -1,0 +1,56 @@
+<!--pages/index/index.wxml-->
+<swiper autoplay='true' interval='2000' duration='1000' indicator-dots='true' circular='true'>
+   <swiper-item>
+      <image src="http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcXu*nHpca9T81IKmzdZxRqGgKVUzukAQLknTn57DUEJJUbDdMQwIjCKX3kZRoKxeXe38r.iD5wqscd9NTORzDw0!/b&bo=gAc4BAAAAAABN6s!&rf=viewer_4"></image>
+   </swiper-item>
+   <swiper-item>
+      <image src="http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcQF59zZZGGDbVZ1SjoZRIJLmCxn*V.Oz8NONVkizBa8VDyDd8V2pvSDKFoNRYobpub5gmJ4j.*4GEVPpPQtCCHo!/b&bo=IAMVAgAAAAABFwQ!&rf=viewer_4"></image>
+   </swiper-item>
+   <swiper-item>
+      <image src="http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcQF59zZZGGDbVZ1SjoZRIJLrKhz3GKaliRTFknZDFmyR5gmbZFnjtf8NcgUiS5LQKRvUgEljU5CeIn44Z61h.jU!/b&bo=igKGAQAAAAABFz8!&rf=viewer_4"></image>
+   </swiper-item>
+   <swiper-item>
+      <image src="http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcQF59zZZGGDbVZ1SjoZRIJJcupSvlrYZPBeUbCdaBDxKruauiHicYs4I6*he9fmshCSfDLZutJ3uLww5a04qM*M!/b&bo=0ALgAQAAAAABFwM!&rf=viewer_4"></image>
+   </swiper-item>
+</swiper>
+<view class='sugges' >
+ <text>机票预定</text>
+</view>
+<view class='search'>
+  <form bindsubmit='search'>
+    <view wx:if="{{isTic}}">
+    <view class='depAndArr'>
+        <input placeholder='{{ticdep}}' value='{{dep}}' name='depcity' class='dep' bindinput ="depInput"></input>
+    <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcQqY.FREplW9VUsBqzv9WiYU78RufDd3Egd2I*fAGqmNgJje37VRR0mzOtNyckMs5UnLBBdv4X.JJMXLbWP4Vc0!/b&bo=HgAeAAAAAAADFzI!&rf=viewer_4' class='trans' bindtap='change'></image>
+      <view></view>
+    <input placeholder='{{ticarr}}' value='{{arr}}' name='arrcity' class='arr'  bindinput="arrInput"></input>
+    </view>
+    <view class='deptime'>
+    <!-- <input type='date' placeholder='出发日期'></input> -->
+      <picker mode="date" value="{{date}}" start="2018-07-01" end="2022-07-01" bindchange="bindDateChange">
+            <input  name='deptime' value='{{dates}}' />  
+      </picker>
+    </view>
+    </view>
+    <view wx:else>
+    <view class='depAndArr'>
+        <input placeholder='出发城市' value='{{dep}}' name='depcity' class='dep' bindinput ="depInput"></input>
+    <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcQqY.FREplW9VUsBqzv9WiYU78RufDd3Egd2I*fAGqmNgJje37VRR0mzOtNyckMs5UnLBBdv4X.JJMXLbWP4Vc0!/b&bo=HgAeAAAAAAADFzI!&rf=viewer_4' class='trans' bindtap='change'></image>
+      <view></view>
+    <input placeholder='到达城市' value='{{arr}}' name='arrcity' class='arr'  bindinput="arrInput"></input>
+    </view>
+    <view class='deptime'>
+    <!-- <input type='date' placeholder='出发日期'></input> -->
+      <picker mode="date" value="{{date}}" start="2018-07-01" end="2022-07-01" bindchange="bindDateChange">
+            <input  name='deptime' value='{{dates}}' />  
+      </picker>
+    </view>
+    </view>
+    <view class="loginBtnView">  
+      <button class="loginBtn" type='primary' form-type="submit">查询</button>  
+    </view>
+    <view class="loginBtnView">  
+      <button class="loginBtn" type='primary' bindtap="clear">清除</button>  
+    </view>
+  </form>
+</view>

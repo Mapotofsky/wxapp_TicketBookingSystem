@@ -1,0 +1,28 @@
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="loginarea" >
+    <view class="login1">
+        <image src="http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcXk7DNcY2IdGvybp3GbsZYHJyvN4u6ViWFmAwZ8eKtUmLIePHJXUkBAWmsZqZh*ZTufZWsopX2yETj5CubbysN4!/b&bo=QABAAAAAAAADFzI!&rf=viewer_4" class="loginicon"></image>
+        <button class="userlogin" bindtap="userlogin" type="primary" >普通用户登录</button>
+    </view>
+    <view class="login1">
+        <image src="http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcXk7DNcY2IdGvybp3GbsZYHM62xwEtPSgsRhHKbi9NAVqwd55ztYpye*FIpYnjaruISbfH1uwjVPGF7GXCUYlFA!/b&bo=QABAAAAAAAADFzI!&rf=viewer_4" class="loginicon"></image>
+        <button class="userlogin"  type="primary" bindtap="adminlogin">管理员登录</button>
+    </view>
+</view>
+
+<!-- <button class="loginout" bindtap="loginout" type="primary">退出登录</button>
+<view class="myitem">
+    <button class="service" open-type="contact">在线客服</button>
+
+</view>
+<view class="myitem">
+    <button class="advice" open-type="feedback">反馈建议</button>
+
+</view> -->

@@ -1,0 +1,35 @@
+<!--pages/contacts/contacts.wxml-->
+<view class="contactTitle">
+    <text>我的联系人</text>
+</view>
+<view class='content'>
+    <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 0 }}" wx:for='{{mycontacts}}' wx:for-index="index" wx:key="index">
+        <!-- </van-cell-group> -->
+        <view class='mycontact' bindtap='modifyC' data-id="{{item._id}}">
+            <view class="contactname">
+                <view id="rela">{{item.rela}}</view>
+                <view id="name">{{item.name}}</view>
+            </view>
+            <view class='contactinfo'>
+                <view class="phone">
+                    <text class="item" decode="true">电&emsp;&emsp;话：</text>
+                    <text class="value">{{item.phone}}</text>
+                </view>
+                <view class="email">
+                    <text class="item" decode="true">邮&emsp;&emsp;箱：</text>
+                    <text class="value">{{item.email}}</text>
+                </view>
+                <view class="ident">
+                    <text class="item">身份证号：</text>
+                    <text class="value">{{item.ident}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- </van-cell-group> -->
+        <view slot="right" class="van-swipe-cell__right" bindtap="onTapDel" data-index="{{index}}">删除</view>
+    </van-swipe-cell>
+
+    <view class='addcontact' bindtap='addC'>
+        <image class="icon" src="http://m.qpic.cn/psc?/V51EQZn13Mic6e02scS43PcE2404e3su/45NBuzDIW489QBoVep5mcaFGgXtJyfDAlpj3oehxTVDzMNr8JDFG*O5WSFszdK3YAeljinikLbptXAlOnc.9.rzQOH9jci0Nuf4UPSkcAGw!/b&bo=yADIAAAAAAADFzI!&rf=viewer_4"></image>
+    </view>
+</view>

@@ -1,0 +1,108 @@
+<!--pages/flight/flight.wxml-->
+<view wx:if="{{!user}}">
+        <view class='content'>
+        <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}" wx:for='{{flight}}' wx:for-index="index" wx:key="index" >
+            <!-- <van-cell-group> -->
+            <view class='flight' data-id="{{item._id}}" bindtap="modify">
+                <view class='flightpart1'>
+                    <view class='flightDateAndNum'>
+                        <text style='margin-left: 6%'>{{depdate[index]}}</text>
+                        <text style='margin-left: 14%'>{{item.flightname}}</text>
+                        <text style='margin-left: 15%'>{{arrdate[index]}}</text>
+                    </view>
+                    <view class='flightinfo'>
+                        <view class='info'>
+                            <text>{{item.deptime}}</text>
+                            <text style='color:#c3c3c3'>--------></text>
+                            <text>{{item.arrtime}}</text>
+                        </view>                    
+                    </view>
+                    <view class='flightname'>
+                        <text style='margin-left: 7%'>{{item.dep}}</text>
+                        <text style='margin-left: 51%'>{{item.arr}}</text>
+                    </view>        
+                </view>
+                <view class='flightpart2'>
+                    <view class='price'>
+                        <text style='margin-left: 0px'>￥{{item.eco_price}}</text>            
+                        <text style='font-size: 8px; color: #c3c3c3; margin-left: 6px;'>经济舱</text>
+                        <text style='font-size: 8px; color: #c3c3c3; margin-left: 6px;'>余票:{{item.eco_currentticket}}</text>
+                    </view> 
+                    <view class='price'>
+                        <text style='margin-left: 0px'>￥{{item.first_price}}</text>            
+                        <text style='font-size: 8px; color: #c3c3c3; margin-left: 6px;'>头等舱</text>
+                        <text style='font-size: 8px; color: #c3c3c3; margin-left: 6px;'>余票:{{item.first_currentticket}}</text>
+                    </view>
+                </view>        
+            </view>
+
+            <!-- </van-cell-group> -->
+            <view slot="right" class="van-swipe-cell__right" bindtap="onTapDel" data-index="{{index}}">删除</view>
+        </van-swipe-cell>  
+        <view bindtap='onTapAdd' data-id="0">
+            <image class="add_icon" src="http://m.qpic.cn/psc?/V51EQZn13Mic6e02scS43PcE2404e3su/45NBuzDIW489QBoVep5mcaFGgXtJyfDAlpj3oehxTVDzMNr8JDFG*O5WSFszdK3YAeljinikLbptXAlOnc.9.rzQOH9jci0Nuf4UPSkcAGw!/b&bo=yADIAAAAAAADFzI!&rf=viewer_4"></image>
+        </view>
+        </view> 
+</view>
+<view wx:else>
+    <view wx:if="{{isLogin}}">
+        <view class="orderTitle">
+            <text>我的订单</text>
+        </view>
+        <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}" wx:for='{{myorders}}' wx:key="item">
+            <view class='myorder' data-id="{{item._id}}">
+                <view class="orderInfo">
+                    <view class='flightpart1'>
+                        <view class='flightnum' style="margin-left: 43%;">{{item.flight.flightname}}</view>
+                        <view class='flightinfo'>
+                            <view class='info'>
+                                <text>{{item.flight.deptime}}</text>
+                                <text style='color:#c3c3c3'>--------></text>
+                                <text>{{item.flight.arrtime}}</text>
+                            </view>
+                        </view>
+                        <view class='flightname'>
+                            <text style='margin-left: 6%'>{{item.flight.dep}}</text>
+                            <text style='margin-left: 63%'>{{item.flight.arr}}</text>
+                        </view>
+                    </view>
+                    <view class='flightpart2'>
+                        <view class='price' wx:if="{{item.tickettype=='经济舱'}}">
+                            <text style='margin-left: 15px'>￥{{item.flight.eco_price}}</text>
+                            <text style='font-size: 8px; color: #c3c3c3; margin-left: 6px;'>经济舱</text>
+                        </view>
+                        <view class='price' wx:else>
+                            <text style='margin-left: 15px'>￥{{item.flight.first_price}}</text>
+                            <text style='font-size: 8px; color: #c3c3c3; margin-left: 6px;'>头等舱</text>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="personInfo">
+                    <view class="personTitle">乘机人：</view>
+                    <view class="personIdent" wx:for='{{item.idofchooseman}}' wx:for-item="professionitem" wx:key="{{professionitem}}">
+                        <text decode="true"> &nbsp;&nbsp;{{professionitem.name}}&emsp;</text>
+                        <text decode="true">-{{professionitem.ident}}&emsp;</text>
+                        <text>-{{professionitem.phone}}</text>
+                    </view>
+                    <view class="personTitle">联系人：</view>
+                    <view class="contactIdent">
+                        <text decode="true"> *&nbsp;{{item.contactname}}&emsp;</text>
+                        <text>-{{item.contactphone}}</text>
+                    </view>
+                </view>
+
+                <view class="accountInfo">
+                    <text class="accountItem">交易时间：{{item.ordertime}}</text>
+                    <text class="accountItem">价格：{{item.account}}</text>
+                </view>
+            </view>
+            <view slot="right" class="van-swipe-cell__right" bindtap="refundTic" data-index="{{index}}">退票</view>
+            <view slot="left" class="van-swipe-cell__left" bindtap="changeTic" data-index="{{index}}">改签</view>
+        </van-swipe-cell> 
+    </view>
+</view>
+
+
+
+

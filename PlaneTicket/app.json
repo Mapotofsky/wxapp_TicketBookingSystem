@@ -1,0 +1,59 @@
+{
+    "pages": [
+        "pages/chooselogin/chooselogin",
+        "pages/alterConta/alterConta",
+        "pages/alterpwd/alterpwd",
+        "pages/book/book",
+        "pages/contacts/contacts",
+        "pages/detail/detail",
+        "pages/flight/flight",
+        "pages/index/index",
+        "pages/mine/mine",
+        "pages/modify/modify",
+        "pages/person/person",
+        "pages/person_user/person_user",
+        "pages/result/result",
+        "pages/usermine/usermine"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#6699CC",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "机票预订系统",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "color": "#BaBaBaBa",
+        "selectedColor": "#1AAD16",
+        "list": [
+                    {
+                        "pagePath": "pages/index/index",
+                        "text": "查询",
+                        "iconPath": "images/index.png",
+                        "selectedIconPath": "images/index_focus.png"
+                    },
+                    {
+                        "pagePath": "pages/flight/flight",
+                        "text": "航班",
+                        "iconPath": "images/plane.png",
+                        "selectedIconPath": "images/plane_focus.png"
+                    },
+                    {
+                        "pagePath": "pages/mine/mine",
+                        "text": "我的",
+                        "iconPath": "images/mine.png",
+                        "selectedIconPath": "images/mine_focus.png"
+                    }
+                ]
+            },
+    "usingComponents": {
+        "van-swipe-cell": "./dist/swipe-cell/index",
+        "van-dialog": "./dist/dialog/index",
+        "van-notify": "./dist/notify/index"
+    },      
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "debug": true,
+    "cloud": true
+}

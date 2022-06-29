@@ -1,0 +1,176 @@
+/* pages/flight/flight.wxss */
+page{height: 100%}
+.depAndarr {
+    position: relative;
+    top: 10px;
+    height: 25px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #c3c3c3;
+}
+.flight{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 10px; */
+    border-bottom: 3px solid #c7c7c7;
+}
+.flightpart1{
+    width: 60%;
+    /* margin-top: 20px; */
+}
+.flightpart2{
+    width: 40%;
+    margin-top: 5px;
+}
+.flightinfo{
+    display: flex;
+    flex-direction: row;
+}
+.info{
+    flex: 4;
+    line-height: 15px;
+    color: #000;
+    font-size: 18px;
+    margin-left: 3%;
+}
+.info text{
+    width: 100%;
+    margin-left: 3%;    
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    flex:1;
+    line-height: 15px;
+    color: orange;
+    font-size: 18px;
+}
+.flightDateAndNum{
+    margin-top: 5px;
+    margin-left: 5%;
+    line-height: 15px;
+    color: #c3c3c3;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+.flightnum{
+    margin-top: 5px;
+    margin-left: 5%;
+    line-height: 15px;
+    color: #c3c3c3;
+    font-size: 11px;
+}
+.flightname{
+    margin-top: 5px;
+    margin-left: 5%;
+    line-height: 15px;
+    color: #c3c3c3;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+.demo-swipe-cell {
+    user-select: none;
+}
+  
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+    display: inline-block;
+    width: 65px;
+    height: 44px;
+    font-size: 15px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    background-color: #ee0a24;
+}
+
+.add_icon{
+    position: fixed;   
+    width:42px;  
+    height:42px;   
+    bottom: 15px;   
+    right: 15px;   
+    margin: auto;
+    border-width: thin;
+    border-radius: 50%;
+    /* background-color: #c3c3c3; */
+}
+
+.orderTitle {
+    position: relative;
+    top: 10px;
+    height: 25px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #c3c3c3;
+    margin-bottom: 20px;
+}
+
+.myorder {
+    margin: 8px 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #666;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.orderInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #c7c7c7 dashed 1px;
+}
+
+.personInfo {
+    width: 100%;
+    color: #c3c3c3;
+    align-items: center;
+    border-bottom: #c7c7c7 dashed 1px;
+}
+
+.personTitle {
+    text-align: left;
+    margin: 5px 0 0 5px;
+    font-size: 13px;
+    padding: 0 5px;
+}
+
+.personIdent {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.contactIdent {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 58.5px;
+}
+
+.accountInfo {
+    width: 100%;
+    color: #c3c3c3;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accountItem {
+    margin: auto;
+}

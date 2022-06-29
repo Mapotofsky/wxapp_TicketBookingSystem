@@ -1,0 +1,110 @@
+/* pages/index/index.wxss */
+page{width: 100%;margin: 0 auto;}
+image{width: 100%;}
+.search {
+  /* margin-top: 70rpx; */
+  /* background: #e5e5e5;    */
+   height: 500rpx; 
+  /* background-image:url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-8a9787963e8819578f8114a5b094f485_b.jpg&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640182439&t=d07eb4c79a5a4fb7ecad6a2366ccead0'); */
+}
+.depAndArr{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.depAndArr input{
+  background: #fff;
+  flex: 2;
+  position: relative;
+  top: 20rpx;
+  width: 40%;
+  font-size: 14px;
+  text-align: center;
+  border: 1rpx solid skyblue;
+  border-radius:1rpx; 
+  height: 35px;
+  /* margin-bottom: 20px; */
+}
+.dep{
+   left: 5rpx;
+   margin-right: 5rpx;
+   border: 1rpx solid skyblue;
+}
+.arr{
+  margin-left: 5rpx;
+  right: 5rpx;
+  border: 1rpx solid skyblue;
+}
+.trans{
+  /* flex: 1; */
+  width: 30px;
+  height: 30px;
+  margin-top: 25rpx;
+}
+.deptime{
+  margin-top: 20px;
+}
+.deptime input{
+  background: #fff;
+  position: relative;
+  top: 20rpx;
+  width: 98%;
+  left: 1%;
+  font-size: 15px;
+  text-align: center;
+  border: 1rpx solid skyblue;
+  border-radius:1rpx; 
+  height: 35px;
+}
+/*按钮*/  
+.loginBtnView {  
+  width: 100%;  
+  height: auto;  
+  margin-top: 0px;  
+  margin-bottom: 0px;  
+  padding-bottom: 0px;
+}  
+  
+.loginBtn {  
+  width: 100%;  
+  margin-top: 35px;
+  font-size: 13px;   
+}
+.sugges{
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:white;
+    border: 1rpx solid skyblue;
+    padding: 15rpx;
+}
+.sugges text{
+  color: #6699CC;
+  position: relative;
+  bottom: 10rpx;
+}
+.book{
+  margin-top: 12rpx;
+  display: flex;
+  height: 200rpx;
+  border-bottom:1rpx solid #c3c3c3;
+  margin-bottom: 10rpx;
+}
+.bookimage{
+  flex: 2;
+  /* background: #c3c3c3; */
+  height: 100%;
+}
+.bookimage image{
+  height: 100%;
+}
+.content{
+  flex: 4;
+  margin-top: 50rpx;
+  font-size: 14px;
+  color: #666;
+  /* background: #000; */
+  margin-left: 10rpx;
+}

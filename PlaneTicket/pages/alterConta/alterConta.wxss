@@ -1,0 +1,62 @@
+/* pages/alterConta/alterConta.wxss */
+.contactTitle {
+    position: relative;
+    top: 10px;
+    height: 25px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #c3c3c3;
+    margin-bottom: 20px;
+}
+
+.content {
+    flex-direction: column;
+    flex: 2;
+}
+
+.content-item {
+    height: 38px;
+    background: #fff;
+    border-bottom: 1rpx solid #c3c3c3;
+}
+
+.tab {
+    margin-top: 16rpx;
+}
+
+.tabicon {
+    margin-left: 15rpx;
+    margin-right: 10rpx;
+    float: left;
+}
+
+.tabicon image {
+    vertical-align: middle;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+}
+
+.content-item text {
+    text-align: center;
+    vertical-align: middle;
+    color: #666;
+    font-size: 13px;
+    float: left;
+    margin-right: 30rpx;
+    margin-top: 5rpx;
+}
+
+.tabimg input {
+    font-size: 13px;
+    color: #666;
+}
+
+.BtnView {
+    margin-top: 50rpx;
+}
+
+.BtnView button {
+    font-size: 14px;
+}

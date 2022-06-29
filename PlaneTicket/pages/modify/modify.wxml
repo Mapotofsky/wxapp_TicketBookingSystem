@@ -1,0 +1,84 @@
+<!--pages/modify/modify.wxml-->
+<view class='container1'>
+    <view class="modify-form" >
+        <view class="modify-form-title">{{title}}</view>
+        <form bindsubmit='submit'>
+          <!--航班编号-->  
+          <view class="inputView">    
+            <label class="InfoLab">航班编号:</label> 
+            <input wx:if="{{id == 0}}" class="inputText" name="flightname" placeholder="{{flightname}}"/>   
+            <input wx:else class="inputText" name="flightname" value="{{flightname}}"/>  
+          </view>  
+          <view class="line"></view>  
+
+          <!--出发地-->  
+          <view class="inputView">  
+            <label class="InfoLab">出发地:</label>  
+            <input wx:if="{{id == 0}}" class="inputText" name="dep" placeholder="{{dep}}"/> 
+            <input wx:else class="inputText"  name="dep" value="{{dep}}" />  
+          </view>  
+          <view class="line"></view>
+
+          <!--目的地-->  
+          <view class="inputView">  
+            <label class="InfoLab">目的地:</label>  
+            <input wx:if="{{id == 0}}" class="inputText" name="arr" placeholder="{{arr}}"/> 
+            <input wx:else class="inputText"  name="arr" value="{{arr}}" />  
+          </view>  
+          <view class="line"></view>
+
+          <!--出发时间-->  
+          <view class="inputView">  
+            <label class="InfoLab">出发时间:</label>  
+            <input wx:if="{{id == 0}}" class="inputText" name="deptime" placeholder="{{deptime}}"/> 
+            <input wx:else class="inputText"  name="deptime" value="{{deptime}}" />  
+          </view>  
+          <view class="line"></view>
+
+          <!--到达时间-->  
+          <view class="inputView">  
+            <label class="InfoLab">到达时间:</label>  
+            <input wx:if="{{id == 0}}" class="inputText" name="arrtime" placeholder="{{arrtime}}"/> 
+            <input wx:else class="inputText" name="arrtime" value="{{arrtime}}" />  
+          </view>  
+          <view class="line"></view>
+
+          <!--经济舱票价-->  
+          <view class="inputView">  
+            <label class="InfoLab">经济舱票价:</label>  
+            <input wx:if="{{id == 0}}" class="inputText" name="eco_price" placeholder="{{eco_price}}"/> 
+            <input wx:else class="inputText"  name="eco_price" value="{{eco_price}}" />  
+          </view>   
+          <view class="line"></view>
+
+          <!--经济舱总票数-->  
+          <view class="inputView">  
+            <label class="InfoLab">经济舱总票数:</label>  
+            <input wx:if="{{id == 0}}" class="inputText" name="eco_totalticket" placeholder="{{eco_totalticket}}"/> 
+            <input wx:else class="inputText"  name="eco_totalticket" value="{{eco_totalticket}}" />  
+          </view>  
+          <view class="line"></view>
+
+          <!--商务舱票价-->  
+          <view class="inputView">  
+            <label class="InfoLab">头等舱票价:</label>  
+            <input wx:if="{{id == 0}}" class="inputText" name="first_price" placeholder="{{first_price}}"/> 
+            <input wx:else class="inputText"  name="first_price" value="{{first_price}}" />  
+          </view>  
+          <view class="line"></view>
+
+          <!--商务舱总票数-->  
+          <view class="inputView">  
+            <label class="InfoLab">头等舱总票数:</label>  
+            <input wx:if="{{id == 0}}" class="inputText" name="first_totalticket" placeholder="{{first_totalticket}}"/> 
+            <input wx:else class="inputText"  name="first_totalticket" value="{{first_totalticket}}" />  
+          </view>  
+          <view class="line"></view>
+
+          <!--按钮-->  
+          <view class="submitBtnView">  
+            <button class="submitBtn" type='primary'  form-type="submit">提交</button>  
+          </view>
+        </form>
+    </view>
+</view>

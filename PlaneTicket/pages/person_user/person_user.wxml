@@ -1,0 +1,67 @@
+<!--pages/person/person.wxml-->
+<view class='container'>
+  <view class='head'>
+      <view class='userimg'>
+        <image src='{{userInfo.avatar}}'></image>
+      </view>
+       <view class='userIntro'>
+        <text>{{userInfo.nickName}}</text>
+       </view>
+   </view>
+  
+   <view class='content'>
+   <form bindsubmit='altrReader_user'>
+      <view class='content-item'>
+        <view class='tab'>
+          <view class='tabicon'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcUonpHa8mBWmU.lXIyfMo.yHxKPoPibVKSxHFp2BSrT5otHnYgTTAuTTxGmHS2xrVmsu53jvta5AUaxK01Zj1*w!/b&bo=QABAAAAAAAADFzI!&rf=viewer_4'></image>
+          </view>
+          <text>电话:</text>
+        <view class='tabimg'>
+            <input name='phone' value='{{userInfo.tel}}'></input>
+          </view>
+        </view>
+      </view>
+
+      <view class='content-item'>
+        <view class='tab'>
+          <view class='tabicon'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcUonpHa8mBWmU.lXIyfMo.xbFHyGK4.Mir4sQ9J1lSxdOBguIQT4LP3.FE8lBaCUB3N0I6oOugDK0mrDaWrkCZs!/b&bo=QABAAAAAAAADFzI!&rf=viewer_4'></image>
+          </view>
+          <text>邮箱:</text>
+        <view class='tabimg'>
+            <input name='email' value='{{userInfo.email}}'></input>
+          </view>
+        </view>
+      </view>
+
+      <view class='content-item'>
+        <view class='tab'>
+          <view class='tabicon'>
+          <image src='http://m.qpic.cn/psc?/V51EQZn13Mic6e02scS43PcE2404e3su/45NBuzDIW489QBoVep5mcR4aQa9vySeOy8XVNJgtaoTxF14rmFWkWknUqNYvXKhN1wOD8zVxbOd5V5RrzeCGgeXXDo.VHVO*1okaZAq79YM!/b&bo=yQDIAAAAAAADFzM!&rf=viewer_4'></image>
+          </view>
+          <text>身份证号:</text>
+        <view class='tabimg'>
+            <input name='ident' value='{{userInfo.ident}}'></input>
+          </view>
+        </view>
+      </view>
+
+      <view class='content-item'>
+        <view class='tab'>
+          <view class='tabicon'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcUonpHa8mBWmU.lXIyfMo.xvxAAKMO*KxrhcTCnCn.Xkiuj9NIXIaDXuiktNTK6INofQmfdAN6*NPVUzbJqnnRo!/b&bo=QABAAAAAAAADFzI!&rf=viewer_4'></image>
+          </view>
+          <text>姓名:</text>
+        <view class='tabimg'>
+            <input name='name' value='{{userInfo.name}}'></input>
+          </view>
+        </view>
+      </view>
+
+      <view class="BtnView">  
+          <button class="loginBtn" type='primary' form-type="submit">提交</button>  
+      </view>
+  </form>
+  </view>
+ </view>

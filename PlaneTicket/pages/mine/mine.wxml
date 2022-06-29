@@ -1,0 +1,126 @@
+<!--pages/mine/mine.wxml-->
+<view wx:if="{{!user}}">
+  <view class="container1" wx:if='{{!isLogin}}'>
+      <view class="login-icon">  
+        <image class="login-img" src="http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcYkzpN.yGDbFcc3PYQEX6QTH1cx2t20a47gATSPbVbiTP3RkPZ0WhjT8n6p0raQrxDgVZ4g0VlgRU59pu6O1.E8!/b&bo=gAc4BAAAAAABJ7s!&rf=viewer_4"></image>  
+      </view>  
+      <view class="login-from" >
+      <view class="login-from-title">请输入管理员账号及密码</view>
+      <form bindsubmit='userLogin'>
+          <!--账号-->  
+          <view class="inputView">    
+            <label class="loginLab">账号:</label>  
+            <input class="inputText" name='user' placeholder="请输入账号"/>  
+          </view>  
+          <view class="line"></view>  
+        
+          <!--密码-->  
+          <view class="inputView">  
+            <label class="loginLab">密码:</label>  
+            <input class="inputText" type='password' name='pwd' placeholder="请输入密码" />  
+          </view>  
+          <view class="line"></view>
+          <!--按钮-->  
+          <view class="loginBtnView">  
+            <button class="loginBtn" type='primary' form-type="submit">登录</button>  
+          </view>
+        </form>   
+      </view>
+</view>
+<view class='container2' wx:else>
+   <view class='head'>
+      <view class='userimg'>
+        <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcbmUwqoJhDSmXAEp*vH7NgnCgv6YleGm1oJxP6W3yYs3Z4RfTkGKU3LzQaq78iDkQuPw3PHxL8t4KxWCRBBhBgA!/b&bo=OARFBQAAAAADF04!&rf=viewer_4'></image>
+      </view>
+       <view class='userIntro'>
+        <text>管理员</text>
+       </view>
+   </view>
+   
+   <view class='content'>
+    <view class='content-item'>
+     <view class='tab' bindtap='alterperson'>
+        <view class='tabicon'>
+         <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcfjoOAsyaYy4nRf8C9KS*mp0R0n8XJmG4WTYz4qshaRjXiUs1Vawz79olEZoyDIuRCkCped360Tjy5utvJvqZEU!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+        <text>修改资料</text>
+        <view class='tabimg'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcaYQz9mMtDWp8rhh*MiZNz5.gAWBiHkosjnkufZ56O.fpfPvD9ktDrUZ1A*pK5ruKmpMeRuM3sXgLg5a.W7d.5w!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+      </view>
+    </view>
+    <view class='content-item'>
+      <view class='tab' bindtap='alterpwd'>
+        <view class='tabicon'>
+         <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcfjoOAsyaYy4nRf8C9KS*mpUr6HBbjp1ViR*nZ5jcF7fgsV55R9Q5uT0RFxbxPvUFgrkwcXtSAy7DHwecFBqk5E!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+        <text>修改密码</text>
+        <view class='tabimg'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcaYQz9mMtDWp8rhh*MiZNz5.gAWBiHkosjnkufZ56O.fpfPvD9ktDrUZ1A*pK5ruKmpMeRuM3sXgLg5a.W7d.5w!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+      </view>
+    </view>
+     <view class='content-item'>
+      <view class='tab' bindtap='adminexitLogin'>
+        <view class='tabicon'>
+         <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcTPlE55dJd8y1xNfxEakIOoaRMMe7b3imk4cgti6GzP67r68ObcMqqdCRX*oo6so*bkao4LQVARJjBFukVp9z4g!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+        <text>退出登录</text>
+        <view class='tabimg'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcaYQz9mMtDWp8rhh*MiZNz5.gAWBiHkosjnkufZ56O.fpfPvD9ktDrUZ1A*pK5ruKmpMeRuM3sXgLg5a.W7d.5w!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+      </view>
+     </view>
+   </view>
+</view>
+</view>
+
+<view wx:else>
+  <view class='container2'>
+    <view class='head'>
+      <view class='userimg2'>
+        <image src='{{userInfo.avatar}}'></image>
+      </view>
+      <view class='userIntro'>
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='content-item'>
+      <view class='tab' bindtap='alterperson_user'>
+        <view class='tabicon'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcUonpHa8mBWmU.lXIyfMo.wLh6KLnLfRoapliZVxWOCrxFfLK6EBfYc22ntDgMeDhv5iAaPbxEZRjVB1kTd8NVw!/b&bo=QABAAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+        <text>修改资料</text>
+        <view class='tabimg'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcaYQz9mMtDWp8rhh*MiZNz5.gAWBiHkosjnkufZ56O.fpfPvD9ktDrUZ1A*pK5ruKmpMeRuM3sXgLg5a.W7d.5w!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+      </view>
+    </view>
+    <view class='content-item'>
+      <view class='tab' bindtap='altercontacts'>
+        <view class='tabicon'>
+          <image src='http://m.qpic.cn/psc?/V51EQZn13Mic6e02scS43PcE2404e3su/45NBuzDIW489QBoVep5mcR4aQa9vySeOy8XVNJgtaoRTFBNrDHQwk9yOG3st3whnhokJDne4tUTATKwEiVTmObOBqusE8BKtReSAyO4elE4!/b&bo=yADIAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+        <text>修改联系人</text>
+        <view class='tabimg' >
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcaYQz9mMtDWp8rhh*MiZNz5.gAWBiHkosjnkufZ56O.fpfPvD9ktDrUZ1A*pK5ruKmpMeRuM3sXgLg5a.W7d.5w!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+      </view>
+    </view>
+    <view class='content-item'>
+      <view class='tab' bindtap='userexitLogin'>
+        <view class='tabicon'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcUonpHa8mBWmU.lXIyfMo.xhuYVSo460rJRLXqXjhqicJoZ3wW6VJHJsKiFwpke8e86LfAQ9mp0EYpTY9jHHGas!/b&bo=QABAAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+        <text>退出登录</text>
+        <view class='tabimg'>
+          <image src='http://m.qpic.cn/psc?/V53hu6fq2h5K1y3Lmdmv0m0XR93szpDC/45NBuzDIW489QBoVep5mcaYQz9mMtDWp8rhh*MiZNz5.gAWBiHkosjnkufZ56O.fpfPvD9ktDrUZ1A*pK5ruKmpMeRuM3sXgLg5a.W7d.5w!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
